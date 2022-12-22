@@ -1,0 +1,18 @@
+.fun-fact {
+    background: #086ad8;
+    &__wrap {
+        .count {
+            font-size: 56px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1;
+            font-weight: 700;
+        }
+        .text {
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@font-face {
+  src: url("../../font/cerebrisans/CerebriSans-Light.woff2");
+  font-family: "CerebriSans";
+  font-weight: 300;
+}
+@font-face {
+  src: url("../../font/cerebrisans/CerebriSans-Regular.woff2");
+  font-family: "CerebriSans";
+  font-weight: 400;
+}
+@font-face {
+  src: url("../../font/cerebrisans/CerebriSans-Medium.woff2");
+  font-family: "CerebriSans";
+  font-weight: 500;
+}
+@font-face {
+  src: url("../../font/cerebrisans/CerebriSans-SemiBold.woff2");
+  font-family: "CerebriSans";
+  font-weight: 600;
+}
+@font-face {
+  src: url("../../font/cerebrisans/CerebriSans-Bold.woff2");
+  font-family: "CerebriSans";
+  font-weight: 700;
+}
+.section-title__sub {
+  margin-bottom: 20px;
+  color: #ababab;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.43;
+  margin-top: -5px;
+  font-weight: 700;
+}
+.section-title__heading {
+  font-size: 40px;
+  color: #333333;
+  font-weight: 700;
+  line-height: 1.41;
+}
+.section-title__heading .text-color-primary {
+  color: #086AD8;
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .section-title__heading {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .section-title__heading {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section-title__heading {
+    font-size: 25px;
+  }
+}

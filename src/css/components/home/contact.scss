@@ -1,0 +1,129 @@
+.contact {
+    background-color: #eff2f6;
+    background-image: url("./../images/home/contact/contact-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: 768px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 426px) {
+        padding: 60px 0;
+    }
+    &__content {
+        &-wrap {
+            .heading {
+                position: relative;
+                padding-left: 34px;
+                font-weight: 600;
+                line-height: 1.4;
+                font-size: 40px;
+                color: #333333;
+                margin-bottom: 0;
+                .text-color-primary {
+                    color: #086ad8;
+                    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 4px;
+                    height: 94%;
+                    transform: translateY(-50%);
+                    background-color: #d2a98e;
+                }
+                @media (max-width: 1199px) and (min-width: 992px) {
+                    font-size: 32px;
+                }
+                @media (max-width: 991px) and (min-width: 768px) {
+                    font-size: 28px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 25px;
+                }
+            }
+            .sub-heading {
+                margin-top: 15px;
+                font-size: 18px;
+                margin-left: 34px;
+                color: #696969;
+                font-style: normal;
+                font-weight: 400;
+                visibility: visible;
+                line-height: 1.74;
+            }
+        }
+        &-info {
+            @media (max-width: 991px) {
+                padding-top: 30px;
+            }
+            .icon {
+                font-size: 40px;
+                color: #086ad8;
+            }
+            .heading {
+                font-size: 15px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                font-weight: 500;
+            }
+            .call-us {
+                line-height: 1.17;
+                position: relative;
+                display: inline-block;
+                font-size: 48px;
+                a {
+                    color: #002fa6;
+                    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    display: inline-block;
+                    line-height: inherit;
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-weight: 700;
+                }
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    bottom: 0;
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                    z-index: 1;
+                    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+                    background: currentColor;
+                    color: #002fa6;
+                }
+                &:hover::before {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
+                @media (max-width: 1199px) and (min-width: 992px) {
+                    font-size: 36px;
+                }
+                @media (max-width: 991px) and (min-width: 768px) {
+                    font-size: 36px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 30px;
+                }
+            }
+            .contact-us-button {
+                margin-top: 20px;
+                .layout__btn {
+                    min-width: 230px;
+                    background-color: #d2a98e;
+                    &:hover {
+                        background: #086ad8;
+                    }
+                }
+            }
+        }
+    }
+}

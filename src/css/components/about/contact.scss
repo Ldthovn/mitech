@@ -1,0 +1,74 @@
+.about-contact {
+    background-color: #eff2f6;
+    background-image: url("../../images/about/contact/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .contact__info {
+        @media #{$tablet-device, $large-mobile} {
+            margin-bottom: 60px;
+            margin-top: 60px;
+        }
+        h3 {
+            font-size: 40px;
+            @media #{$desktop-device} {
+                font-size: 32px;
+            }
+            @media #{$tablet-device} {
+                font-size: 28px;
+            }
+            @media #{$large-mobile} {
+                font-size: 25px;
+            }
+        }
+        .star-rating {
+            color: #fb0;
+            font-size: 24px;
+            span + span {
+                margin-left: 11px;
+            }
+        }
+        .sub-text {
+            color: #696969;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .list__item {
+            display: block;
+            &-content {
+                display: flex;
+                margin-top: 55px;
+                .icon {
+                    color: #d2a98e;
+                    border-color: #fff;
+                    font-size: 40px;
+                    margin-right: 10px;
+                    flex-shrink: 0;
+                    min-width: 54px;
+                }
+                .main-content {
+                    .heading {
+                        color: #333333;
+                        font-size: 15px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        line-height: 1.78;
+                        margin-bottom: 13px;
+                    }
+                    .text {
+                        color: #086ad8;
+                        font-size: 34px;
+                        font-weight: 700;
+                        line-height: 1.17;
+                        @media #{$desktop-device , $tablet-device} {
+                            font-size: 24px;
+                        }
+                        @media #{ $large-mobile} {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

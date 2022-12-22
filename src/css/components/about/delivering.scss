@@ -1,0 +1,48 @@
+.delivering {
+    &__title {
+        h3 {
+            font-size: 40px;
+            @media #{$desktop-device} {
+                font-size: 32px;
+            }
+            @media #{$tablet-device} {
+                font-size: 28px;
+            }
+            @media #{$large-mobile} {
+                font-size: 25px;
+            }
+        }
+    }
+    &__wrap {
+        .list__item {
+            padding-left: 40px;
+            margin-top: 40px;
+            position: relative;
+            .market {
+                position: absolute;
+                top: 1px;
+                left: 0;
+                display: block;
+                font-size: 24px;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                font-weight: 400;
+                color: #d2a98e;
+            }
+            .title-wrap {
+                h5 {
+                    font-size: 24px;
+                    @media #{$large-mobile} {
+                        font-size: 20px;
+                    }
+                }
+                .title {
+                    color: #086ad8;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.about {
+    padding-top: 195px;
+    padding-bottom: 204px;
+    background-image: url("./../images/about/about/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    h5 {
+        font-weight: 400;
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+h1 {
+    font-size: 56px;
+    @media #{$desktop-device} {
+        font-size: 46px;
+    }
+    @media #{$tablet-device} {
+        font-size: 40px;
+    }
+    @media #{$large-mobile} {
+        font-size: 34px;
+    }
+}
+h5 {
+    font-size: 24px;
+    @media #{$large-mobile} {
+        font-size: 20px;
+    }
+}

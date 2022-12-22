@@ -1,0 +1,106 @@
+.service {
+  background: #f8f8f8;
+  padding: 100px 0;
+}
+.service__heading {
+  text-align: center;
+}
+.service__content:hover .box__body-circle-arrow .middle-dot {
+  animation: boxImageAnimationSignal cubic-bezier(0, 0.55, 0.55, 1) 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.service__content:hover a {
+  background: #086ad8 !important;
+}
+.service__content-box {
+  box-shadow: 0 18px 40px rgba(51, 51, 51, 0.1);
+  background: #fff;
+  border-radius: 5px;
+  padding: 50px 30px 63px;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-align: center;
+  margin-top: 60px;
+}
+.service__content-box .box__image img {
+  margin-bottom: 41px;
+  width: auto;
+  display: inline-block;
+}
+.service__content-box .box__body-heading {
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: #333333;
+  font-size: 24px;
+}
+.service__content-box .box__body-describe {
+  line-height: 1.74;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  visibility: visible;
+  color: #696969;
+}
+.service__content-box .box__body-circle-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  height: 56px;
+  width: 56px;
+}
+.service__content-box .box__body-circle-arrow .middle-dot {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #086ad8;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+.service__content-box .box__body-circle-arrow a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  background: #d2a98e;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.service__note {
+  margin-top: 90px;
+}
+
+@keyframes boxImageAnimationSignal {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  1% {
+    opacity: 0.14;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}

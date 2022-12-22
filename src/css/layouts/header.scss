@@ -1,0 +1,405 @@
+.header {
+    border-color: #e4e8f6;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    .header__top {
+        p:last-child {
+            margin-bottom: 0;
+        }
+        &-text {
+            padding: 10px 0;
+            font-size: 14px;
+            line-height: 1.78;
+            a {
+                color: #002fa6;
+                font-weight: 500;
+                transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+        }
+    }
+    .header__bottom {
+        &-main {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            .header__logo {
+                display: flex;
+                flex-shrink: 0;
+                flex-basis: 23.5%;
+                justify-content: center;
+                padding: 14px 0;
+                @media (max-width: 1499px) and (min-width: 1200px) {
+                    flex-basis: 13%;
+                }
+                @media (max-width: 1199px) and (min-width: 768px) {
+                    flex-basis: 40%;
+                    justify-content: flex-start;
+                }
+                @media (max-width: 767px) {
+                    flex-basis: 50%;
+                    justify-content: flex-start;
+                }
+                a {
+                    img {
+                        width: 160px;
+                    }
+                }
+            }
+            .header__middle {
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                &-wrap {
+                    .wrap__inner {
+                        display: flex;
+                        align-items: center;
+                        .header__navigation {
+                            .navigation__menu {
+                                &-list {
+                                    display: flex;
+                                    .list__item {
+                                        margin: 0 24px;
+                                        position: relative;
+                                        @media (max-width: 1599px) and (min-width: 1500px) {
+                                            margin: 0 22px;
+                                        }
+                                        &:first-child {
+                                            margin: 0 24px 0 0;
+                                        }
+                                        &-link {
+                                            padding: 31px 2px;
+                                            position: relative;
+                                            display: block;
+                                            color: #000000;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            line-height: 1.18;
+                                            &::before {
+                                                content: "";
+                                                width: 0;
+                                                left: 0;
+                                                height: 3px;
+                                                bottom: 0;
+                                                position: absolute;
+                                                background-color: #086ad8;
+                                                transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                                            }
+                                            i {
+                                                position: static;
+                                                margin-left: 5px;
+                                                font-weight: 400;
+                                                vertical-align: middle;
+                                                transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                                            }
+                                            &:hover {
+                                                &::before {
+                                                    width: 100%;
+                                                    left: 0;
+                                                }
+                                                .text {
+                                                    color: #086ad8;
+                                                }
+                                                i {
+                                                    transform: rotate(90deg);
+                                                    color: #086ad8;
+                                                }
+                                            }
+                                        }
+                                        .sub-menu {
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 0;
+                                            box-shadow: 0 2px 29px rgba(0, 0, 0, 0.05);
+                                            border-bottom: 3px solid #086ad8;
+                                            background-color: #ffffff;
+                                            transform: translateY(50px);
+                                            transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                                            transition-delay: 0.2s;
+                                            transition-duration: 0.4s;
+                                            visibility: hidden;
+                                            opacity: 0;
+                                            min-width: 240px;
+                                            padding: 20px 0;
+                                            z-index: 100;
+                                            &__item {
+                                                &-link {
+                                                    display: block;
+                                                    padding: 5px 30px;
+                                                    font-weight: 400;
+                                                    transition: 0s;
+                                                    .sub-menu__text {
+                                                        color: #ababab;
+                                                        position: relative;
+                                                        &::after {
+                                                            content: "";
+                                                            width: 0;
+                                                            height: 1px;
+                                                            bottom: 0;
+                                                            position: absolute;
+                                                            left: auto;
+                                                            right: 0;
+                                                            z-index: -1;
+                                                            background-color: #086ad8;
+                                                            transition: 0.3s;
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        .sub-menu__text {
+                                                            color: #086ad8;
+                                                            &::after {
+                                                                width: 100%;
+                                                                left: 0;
+                                                                right: auto;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .active {
+                                                .sub-menu__item-link {
+                                                    .sub-menu__text {
+                                                        position: relative;
+                                                        color: #086ad8;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            .sub-menu {
+                                                transform: translateY(0);
+                                                visibility: visible;
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                    .active {
+                                        .list__item-link {
+                                            &::before {
+                                                content: "";
+                                                width: 100%;
+                                                left: 0;
+                                                height: 3px;
+                                                bottom: 0;
+                                                position: absolute;
+                                                background-color: #086ad8;
+                                                transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                                            }
+                                        }
+                                        .text {
+                                            color: #086ad8;
+                                        }
+                                        i {
+                                            color: #086ad8;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .header__right {
+                flex-shrink: 0;
+                flex-basis: 23.5%;
+                display: flex;
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+                -webkit-box-align: center;
+                align-items: center;
+                @media (max-width: 1199px) and (min-width: 768px) {
+                    flex-basis: 60%;
+                }
+                @media (max-width: 767px) {
+                    flex-basis: 50%;
+                }
+                &-inner {
+                    display: flex;
+                    margin: 0 -12px;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    -webkit-box-pack: end;
+                    justify-content: flex-end;
+                    flex-shrink: 0;
+                    padding: 0 12px;
+                    @media (max-width: 767px) {
+                        margin: auto;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        justify-content: center;
+                        padding: 20px;
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.09);
+                        transform: translateY(30px);
+                        background-color: #ffffff;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    }
+                    .language-menu {
+                        padding-right: 25px;
+                        ul {
+                            li {
+                                position: relative;
+                                display: inline-block;
+                                line-height: 1;
+                                a {
+                                    padding: 0 10px;
+                                    font-weight: 500;
+                                    color: #333;
+                                    text-transform: uppercase;
+                                    .name {
+                                        margin-left: 10px;
+                                    }
+                                    i {
+                                        position: static;
+                                        margin-left: 5px;
+                                        font-size: 14px;
+                                        vertical-align: revert;
+                                        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                                        font-weight: 400;
+                                    }
+                                }
+                                .sub-menu__flag {
+                                    min-width: 200px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    position: absolute;
+                                    top: 100%;
+                                    right: 0;
+                                    left: 0;
+                                    padding: 0;
+                                    margin: 0;
+                                    list-style-type: none;
+                                    z-index: 102;
+                                    box-shadow: 0 0 37px rgba(0, 0, 0, 0.07);
+                                    transform: translateY(30px);
+                                    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                                    .flag__item {
+                                        padding: 10px;
+                                        width: 100%;
+                                        &:hover {
+                                            background: #eeeeee;
+                                        }
+                                    }
+                                }
+                                &:hover {
+                                    .sub-menu__flag {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: translateY(10px);
+                                        background-color: #fff;
+                                    }
+                                    i {
+                                        color: #086ad8;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .search {
+                        height: 100%;
+                        flex-shrink: 0;
+                        align-self: stretch;
+                        .search-form-top {
+                            position: relative;
+                            background: transparent;
+                            border-left: 1px solid #eee;
+                            margin-right: -15px;
+                            .search-field {
+                                max-width: 225px;
+                                color: #333;
+                                min-height: 80px;
+                                width: 270px;
+                                border-radius: 0;
+                                border: 0 !important;
+                                background: 0 0 !important;
+                                padding-right: 50px;
+                                padding-left: 10px;
+                            }
+                            .search-submit {
+                                color: #000000;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 0;
+                                font-size: 18px;
+                                background: 0 0;
+                                width: 48px;
+                                height: 48px;
+                                line-height: 50px;
+                                padding: 0;
+                                border: 0;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .header__mobile {
+                    width: 24px;
+                    height: 25px;
+                    position: relative;
+                    margin-left: 30px;
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: #333;
+                        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                        &::before,
+                        &::after {
+                            position: absolute;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #333;
+                            content: "";
+                            transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                        }
+                        &::before {
+                            bottom: 8px;
+                        }
+                        &::after {
+                            bottom: -8px;
+                        }
+                    }
+                }
+                .hidden-icons-menu {
+                    margin-left: 15px;
+                    a {
+                        color: #6d70a6;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .is-sticky {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: 0.95s ease-in-out 0s normal none 1 running fadeInDown;
+        z-index: 999;
+        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}

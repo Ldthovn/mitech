@@ -1,0 +1,81 @@
+.testimonial {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: #f6f2ed;
+    @media (max-width: 1919px) {
+        .container-fluid--cp-8 {
+            padding: 0 40px;
+        }
+    }
+    @media (max-width: 1200px) {
+        .container-fluid--cp-8 {
+            padding: 0 30px;
+        }
+    }
+    .testimonial__container {
+        overflow: inherit;
+        .swiper-wrapper {
+            .swiper-slide {
+                opacity: 1;
+                .testimonial__slider {
+                    visibility: visible;
+                    background: #ffffff;
+                    padding: 51px 37px 40px;
+                    border-radius: 5px;
+                    transform: translateY(0px);
+                    transform: translateY(0px);
+                    &-subject {
+                        margin-bottom: 15px;
+                        font-size: 18px;
+                    }
+                    &-text {
+                        color: #002fa6;
+                        font-size: 18px;
+                    }
+                    &-author__info {
+                        display: flex;
+                        align-items: center;
+                        -webkit-box-align: center;
+                        margin-top: 20px;
+                        .author__info-media {
+                            flex-shrink: 0;
+                            margin-right: 30px;
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+                        .author__info-author {
+                            flex-grow: 1;
+                            -webkit-box-flex: 1;
+                            .name {
+                                color: #333;
+                                font-size: 18px;
+                            }
+                            .designation {
+                                font-size: 14px;
+                                text-transform: uppercase;
+                                &::before {
+                                    content: " / ";
+                                    padding: 0 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-slide-prev {
+                opacity: 0.5;
+            }
+            .swiper-slide-next {
+                opacity: 0.5;
+            }
+        }
+        .swiper-pagination {
+            bottom: -40px;
+            &-bullet {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}

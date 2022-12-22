@@ -1,0 +1,87 @@
+.preloader {
+    &__main {
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        display: block;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+        &-spinner {
+            .bounce {
+                background-color: #086ad8;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+                animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+            }
+        }
+    }
+}
+// .preloader__main {
+//   display: none;
+// }
+.preloader-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.open-preloader {
+    position: fixed;
+    background-color: transparent;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    transition: 0.2s all ease;
+    transition-delay: 0.5s;
+}
+
+.open-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.open-preloader.loaded:before,
+.open-preloader.loaded:after {
+    width: 0%;
+}
+
+.open-preloader:before,
+.open-preloader:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.open-preloader:before {
+    top: 0;
+    left: 0;
+}
+
+.open-preloader:after {
+    bottom: 0;
+    right: 0;
+}

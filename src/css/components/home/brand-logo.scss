@@ -1,0 +1,45 @@
+.brand-logo {
+    padding: 60px 0;
+    .brand-logo__slider {
+        .slider__container {
+            .swiper-wrapper {
+                align-items: center;
+                .swiper-slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 18px;
+                    a {
+                        .brand-logo__image {
+                            transition: all 0.4s linear;
+                        }
+                        .brand-logo__image-hover {
+                            display: flex;
+                            justify-content: center;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: scale(0.8, 0.8);
+                            transition: all 0.4s linear;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+                    &:hover {
+                        .brand-logo__image {
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: scale(0.8, 0.8);
+                        }
+                        .brand-logo__image-hover {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

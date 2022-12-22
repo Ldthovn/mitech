@@ -1,0 +1,100 @@
+.blog__item {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.blog__item-list {
+  margin-top: 30px;
+}
+.blog__item-list li {
+  position: relative;
+}
+.blog__item-list li:first-child a {
+  margin-top: -16px;
+}
+.blog__item-list li a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 0 0 30px;
+  color: inherit;
+  display: inline-block;
+  margin-top: 20px;
+}
+.blog__item-list li a i {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.blog__item-list li a .blog__icon-first {
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+.blog__item-list li a:hover {
+  color: #086AD8;
+}
+.blog__item-list li a:hover .blog__icon-first {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+}
+.blog__item-list li a:hover .blog__icon-second {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+}
+.blog__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.blog__content:hover .blog__content-image {
+  transform: translateY(-5px);
+}
+.blog__content-image a img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+.blog__content-post {
+  margin-top: 20px;
+}
+.blog__content-post .post__date {
+  padding: 5px 0;
+}
+.blog__content-post .post__date i {
+  margin-right: 6px;
+}
+.blog__content-post .post__title a {
+  color: inherit;
+  line-height: inherit;
+  font-weight: 900;
+}
+.blog__content-post .post__title a:hover {
+  color: #086AD8;
+}
+.blog__content-post .post__describe {
+  margin-top: 16px;
+}
+.blog__content-post .post__btn a {
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #ccc;
+}
+.blog__content-post .post__btn a i {
+  margin-left: 7px;
+}
+.blog__content-post .post__btn a:hover {
+  color: #d2a98e;
+}

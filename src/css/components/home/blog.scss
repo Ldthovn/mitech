@@ -1,0 +1,111 @@
+.blog {
+    &__item {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        &-list {
+            margin-top: 30px;
+            li {
+                position: relative;
+                &:first-child a {
+                    margin-top: -16px;
+                }
+                a {
+                    position: relative;
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 0 0 0 30px;
+                    color: inherit;
+                    display: inline-block;
+                    margin-top: 20px;
+                    i {
+                        position: absolute;
+                        top: 6px;
+                        left: 0;
+                        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    }
+                    .blog__icon-first {
+                        transform: translateX(-100%);
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    &:hover {
+                        color: #086ad8;
+                        .blog__icon-first {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateX(0px);
+                        }
+                        .blog__icon-second {
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateX(100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        &:hover .blog__content-image {
+            transform: translateY(-5px);
+        }
+        &-image {
+            a {
+                img {
+                    border-radius: 5px;
+                    max-width: 100%;
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+        &-post {
+            margin-top: 20px;
+            .post__date {
+                padding: 5px 0;
+                i {
+                    margin-right: 6px;
+                }
+            }
+            .post__title {
+                a {
+                    color: inherit;
+                    line-height: inherit;
+                    font-weight: 900;
+                    &:hover {
+                        color: #086ad8;
+                    }
+                }
+            }
+            .post__describe {
+                margin-top: 16px;
+            }
+            .post__btn {
+                a {
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-bottom: 1px solid #ccc;
+                    color: #086ad8;
+                    i {
+                        margin-left: 7px;
+                    }
+                    &:hover {
+                        color: #d2a98e;
+                    }
+                }
+            }
+        }
+    }
+}

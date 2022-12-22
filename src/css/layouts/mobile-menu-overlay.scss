@@ -1,0 +1,146 @@
+.mobile-menu-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    overflow: auto;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: url("../images/home/header/light-close.png") 16 16, pointer;
+    visibility: hidden;
+    opacity: 0;
+    &__inner {
+        transform: translateX(120%);
+        width: 400px;
+        height: 100%;
+        float: right;
+        cursor: default;
+        background: #086ad8;
+        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+        overflow-y: auto;
+
+        @media #{$extra-small-mobile} {
+            width: 300px;
+        }
+        .inner__header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            &-close {
+                .close__icon {
+                    position: relative;
+                    cursor: pointer;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    display: inline-block;
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        top: 23px;
+                        left: 8px;
+                        content: "";
+                        width: 24px;
+                        height: 3px;
+                        background: #333333;
+                        transform-origin: 50% 50%;
+                        transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    }
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        .inner__body {
+            padding: 20px 40px 100px;
+            &-navigation {
+                & > ul {
+                    & > li {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+                        & > a {
+                            display: block;
+                            color: #fff;
+                            padding-top: 18px;
+                            padding-bottom: 18px;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 1.5;
+                            transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+                .list {
+                    &__item {
+                        position: relative;
+                        &-icon {
+                            position: absolute;
+                            right: 0;
+                            top: 12px;
+                            width: 40px;
+                            height: 40px;
+                            background: rgba(255, 255, 255, 0.1);
+                            color: #fff;
+                            text-align: center;
+                            line-height: 40px;
+                            cursor: pointer;
+                            transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+                            &:hover {
+                                background: rgba(255, 255, 255, 0.2);
+                            }
+                            i {
+                                font-size: 18px;
+                            }
+                        }
+                        .sub-menu {
+                            display: none;
+                            padding: 12px 0 14px 10px;
+                            border-top: 1px solid rgba(255, 255, 255, 0.15);
+                            li {
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+                                a {
+                                    display: block;
+                                    font-size: 15px;
+                                    color: rgba(255, 255, 255, 0.7);
+                                    font-weight: 500;
+                                    line-height: 1.5;
+                                    padding: 10px 0;
+
+                                    &:hover {
+                                        color: #fff;
+                                    }
+                                }
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+                            }
+                            &.show-menu {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        .mobile-menu-overlay__inner {
+            transform: translateX(00%);
+        }
+        visibility: visible;
+        opacity: 1;
+    }
+}

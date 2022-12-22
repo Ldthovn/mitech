@@ -1,0 +1,57 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Mitech - Technology IT
+        //- JS animation
+        link(rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css")
+        //- Favicon
+        link(rel="icon" href="images/favicon.png")
+        block css
+        //- Font google
+        link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
+        //- Bootstrap
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+        //- Swiper CSS
+        link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.css')
+        link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+        //- Owl Carousel CSS
+        link(rel="stylesheet" href="css/owl.carousel.min.css")
+        link(rel="stylesheet" href="css/owl.theme.default.min.css")
+        //- Fancy box
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+        //- Font awesome
+        link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css')
+        link(rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous')
+        //- Style CSS
+        link(rel='stylesheet' href='css/main.css')
+    body
+        .wrapper
+            //- Mixins
+            include ./mixins/index.pug
+            //- Start PreLoader Section
+            include ./layouts/loading.pug
+            //- End PreLoader Section
+            include ./layouts/header.pug
+            block content
+            include ./layouts/footer.pug
+            include ./layouts/startToolbar.pug
+            include ./layouts/scrollTop.pug
+            include ./layouts/mobile-menu-overlay.pug
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+        //- Swiper JS
+        script(src='https://unpkg.com/swiper/swiper-bundle.js')
+        script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
+        //- Wow JS
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+        //- Fancy box
+        script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+        //- Owl Carousel
+        script(src="js/owl.carousel.min.js")
+        //- Script
+        script(src='js/main.js')
+        script(src="js/page-scroll.js")

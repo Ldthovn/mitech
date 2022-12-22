@@ -1,0 +1,109 @@
+.slider {
+    background: #f4efe9 none repeat scroll 0% 0%;
+    &__infor {
+        &-content {
+            max-width: 605px;
+            float: right;
+            width: 100%;
+            padding-left: 30px;
+            .infor-content__title {
+                color: #086ad8;
+                font-weight: 500;
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+            .infor-content__describe {
+                margin-bottom: 15px;
+                font-weight: 500;
+                font-size: 56px;
+                color: #333333;
+                line-height: 1.41;
+                @media #{$desktop-device} {
+                    font-size: 46px;
+                }
+                @media #{$tablet-device} {
+                    font-size: 40px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 34px;
+                }
+            }
+            .infor-content__note {
+                margin-bottom: 1rem;
+                color: #696969;
+                font-weight: 400;
+                line-height: 1.74;
+                font-size: 15px;
+            }
+            .infor-content__btn {
+                margin-top: 30px;
+            }
+        }
+        &-images {
+            margin-top: 20px;
+            @media #{$tablet-device} {
+                margin-top: 160px;
+            }
+            @media #{$large-mobile} {
+                max-width: 327px;
+                margin: auto;
+                .infotechno-inner-one {
+                    max-width: 260px;
+                    margin: auto;
+                }
+            }
+            .infor-images__one {
+                position: absolute;
+                top: 10px;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .infor-images__two {
+                z-index: 99;
+                position: relative;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .slider {
+        &__infor {
+            &-content {
+                .infor-content__describe {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slider {
+        &__infor {
+            &-content {
+                text-align: center;
+                padding-left: 0;
+                float: inherit;
+                margin: 50px auto 20px;
+                .infor-content__describe {
+                    font-size: 34px;
+                }
+            }
+            &-images {
+                max-width: 327px;
+                margin: auto;
+                .infor-images__one {
+                    max-width: 260px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
